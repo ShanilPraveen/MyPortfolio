@@ -10,11 +10,18 @@ router.get('/', async (req, res) => {
 });
 
 router.post('/', auth, upload.single('image'), async (req, res) => {
-    const {title,description} = req.body;
-    const imageUrl = req.file?.path; 
-    const newBlog = new Blog({title,description,imageUrl});
-    const savedBlog = await newBlog.save();
-    res.json(savedBlog);
+    try {
+      const { title, description } = req.body;
+      const imageUrl = req.file?.path;
+      console.log(imageUrl);
+      const newBlog = new Blog({ title, description, imageUrl });
+  
+      const savedBlog = await newBlog.save();
+      res.status(201).json(savedBlog);
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ error: 'Server error while uploading blog' });
+    }
 });
 
 router.delete('/:id', auth, async (req, res) => {
