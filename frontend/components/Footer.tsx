@@ -1,9 +1,106 @@
-const Footer = () => {
-    return (
-      <footer className="text-center py-6 bg-gray-100">
-        <p className="text-sm text-gray-500">© {new Date().getFullYear()} Shanil. All rights reserved.</p>
-      </footer>
-    );
-  };
+// const Footer = () => {
+//     return (
+//       <footer className="text-center py-6 bg-gray-100">
+//         <p className="text-sm text-gray-500">© {new Date().getFullYear()} Shanil. All rights reserved.</p>
+//       </footer>
+//     );
+//   };
   
+// export default Footer;
+
+import React from 'react';
+import { IoIosMail } from "react-icons/io";
+import { IoLogoLinkedin } from "react-icons/io5";
+import { FaGithub } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
+
+
+const Footer = () => {
+  const currentYear = new Date().getFullYear();
+
+  return (
+    <footer className="w-full bg-gradient-to-r from-gray-800 to-gray-900 text-white py-8 mt-auto">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="space-y-3">
+            <h3 className="text-xl font-bold mb-4 text-white/90">Get In Touch</h3>
+            <p className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors">
+              <IoIosMail size={16} />
+              <a href="mailto:shanilpraveen2000@gmail.com">shanilpraveen2000@gmail.com</a>
+            </p>
+            <p className="text-gray-300 text-sm">
+              Feel free to reach out for collaborations or just a friendly hello
+            </p>
+          </div>
+
+          <div className="space-y-3">
+            <h3 className="text-xl font-bold mb-4 text-white/90">Quick Links</h3>
+            <ul className="space-y-2">
+              <li>
+                <a href="/" className="text-gray-300 hover:text-white transition-colors">Home</a>
+              </li>
+              <li>
+                <a href="/about" className="text-gray-300 hover:text-white transition-colors">About</a>
+              </li>
+              <li>
+                <a href="/projects" className="text-gray-300 hover:text-white transition-colors">Projects</a>
+              </li>
+              <li>
+                <a href="/blog" className="text-gray-300 hover:text-white transition-colors">Blog</a>
+              </li>
+              <li>
+                <a href="/contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+      
+          <div className="space-y-3">
+            <h3 className="text-xl font-bold mb-4 text-white/90">Connect</h3>
+            <div className="flex gap-4">
+              <a 
+                href="https://github.com/ShanilPraveen" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition-colors"
+                aria-label="GitHub"
+              >
+                <FaGithub size={20} />
+              </a>
+              <a 
+                href="https://www.linkedin.com/in/shanil-praveen" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <IoLogoLinkedin size={20} />
+              </a>
+              <a 
+                href="https://instagram.com/yourusername" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition-colors"
+                aria-label="Instagram"
+              >
+                <FaInstagram size={20} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-700 mt-8 pt-6 flex flex-col md:flex-row justify-between items-center">
+          <p className="text-gray-400 text-sm">
+            © {currentYear} Shanil Praveen. All rights reserved.
+          </p>
+          <p className="text-gray-400 text-sm mt-2 md:mt-0">
+            Designed & Built with ❤️
+          </p>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
 export default Footer;
+
