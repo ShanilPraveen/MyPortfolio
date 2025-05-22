@@ -8,26 +8,34 @@ const words = sentence.split(" ");
 
 const Hero = () => {
   return (
-    <section className="flex bg-white justify-between">
-      <div className="flex flex-col justify-center items-center p-10 sm:p-0 sm:ml-40 sm:w-2/5"> 
+    <section className="flex bg-gradient-to-r from-white to-blue-600 justify-between min-h-[85vh] relative overflow-hidden">
+      <div className="flex flex-col justify-center items-start p-10 sm:p-0 sm:ml-40 sm:w-2/5 z-10"> 
+        <motion.div
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7 }}
+          className="mb-3 px-4 py-1 bg-blue-50 rounded-full inline-block"
+        >
+        </motion.div>
+        
         <motion.h1
-          className="text-black font-bold text-2xl sm:text-5xl"
+          className="text-black font-bold text-2xl sm:text-5xl leading-tight"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 2 }}
+          transition={{ duration: 1, delay: 0.2 }}
         >
-          Meet Shanil Praveen : Your Future Tech Partner
+          Meet <span className="bg-gradient-to-r from-blue-800 to-blue-600 bg-clip-text text-transparent">Shanil Praveen</span>: Your Future Tech Partner
         </motion.h1>
 
-        <motion.h1
-          className="text-black font-medium text-1xl pt-10 flex flex-wrap"
+        <motion.div
+          className="text-gray-700 font-medium text-lg pt-6 flex flex-wrap"
           initial="hidden"
           animate="visible"
           variants={{
             hidden: {},
             visible: {
               transition: {
-                staggerChildren: 0.2,
+                staggerChildren: 0.1,
               },
             },
           }}
@@ -44,22 +52,46 @@ const Hero = () => {
               {word}
             </motion.span>
           ))}
-        </motion.h1>
+        </motion.div>
 
-        <div className="flex mt-10 justify-around sm:justify-normal w-3/5 sm:w-full">
-          <button className="bg-blue-500 text-white font-medium py-2 px-4 rounded hover:bg-blue-800">My Work</button>
-          <button className="bg-green-500 text-white font-medium py-2 px-4 rounded hover:bg-green-700 ml-5">About Me</button>
-        </div>
+        <motion.div 
+          className="flex mt-10 justify-around sm:justify-normal w-full"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.8 }}
+        >
+          <a
+            href="/projects"
+            className="bg-gradient-to-r from-blue-700 to-blue-500 text-white font-semibold py-3 px-6 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
+          >
+            My Work
+          </a>
+          <a href='/about' className="border-2 border-blue-600 text-blue-700 font-semibold py-3 px-6 rounded-full hover:bg-blue-50 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 ml-5">
+            About Me
+          </a>
+        </motion.div>
+        
       </div>
 
       <motion.div
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ duration: 1 }}
-        className="hidden sm:flex mr-30"
+        className="hidden sm:flex sm:items-center sm:justify-center relative mr-20"
       >
-        <Image src={me} alt="Picture of the author" width={500} height={500} />
+        <div className="absolute w-[450px] h-[450px] rounded-full bg-blue-50 top-1/2 -translate-y-1/2 right-10 z-0"></div>
+        <Image 
+          src={me} 
+          alt="Picture of the author" 
+          width={500} 
+          height={500} 
+          className="z-10 relative"
+          priority
+        />
       </motion.div>
+      
+      <div className="absolute top-20 right-1/4 w-20 h-20 bg-blue-50 rounded-full opacity-30"></div>
+      <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-blue-50 rounded-full opacity-20"></div>
     </section>
   );
 };
