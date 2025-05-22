@@ -1,12 +1,3 @@
-// const Footer = () => {
-//     return (
-//       <footer className="text-center py-6 bg-gray-100">
-//         <p className="text-sm text-gray-500">© {new Date().getFullYear()} Shanil. All rights reserved.</p>
-//       </footer>
-//     );
-//   };
-  
-// export default Footer;
 
 import React from 'react';
 import { IoIosMail } from "react-icons/io";
@@ -19,7 +10,7 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="w-full bg-gradient-to-r from-gray-800 to-gray-900 text-white py-8 mt-auto">
+    <footer className="w-full bg-blue-700 text-white py-8 mt-auto">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="space-y-3">
