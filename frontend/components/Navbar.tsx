@@ -54,7 +54,7 @@ const Navbar: React.FC = () => {
           </li>
           <li>
             <Link 
-              href="/blog" 
+              href="/blogs" 
               className={`text-lg font-semibold relative after:content-[''] after:absolute after:h-0.5 after:bg-blue-700 after:left-0 after:-bottom-1 after:transition-all after:duration-300 hover:text-blue-700 ${
                 pathname === "/blog" 
                   ? "text-blue-700 after:w-full" 
@@ -131,7 +131,7 @@ const Navbar: React.FC = () => {
               </li>
               <li>
                 <Link 
-                  href="/blog" 
+                  href="/blogs" 
                   className={`text-xl font-semibold transition-colors duration-300 ${
                     pathname === "/blog" ? "text-blue-700" : "text-gray-800 hover:text-blue-700"
                   }`}
