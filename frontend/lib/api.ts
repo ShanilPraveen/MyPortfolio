@@ -165,3 +165,32 @@ export const addBlog = async (formData: {
     throw error;
   }
 };
+
+export const sendEmail = async (data: {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}) => {
+  console.log("Sending email with data:", data);
+  try {
+    const res = await fetch(`${API_BASE_URL}/contact`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    const json = await res.json(); 
+
+    if (!res.ok) {
+      throw new Error(json.error || "Failed to send email"); 
+    }
+
+    return json;
+  } catch (error) {
+    console.error("Error sending email:", error);
+    throw error;
+  }
+};
