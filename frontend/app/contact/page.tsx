@@ -75,7 +75,7 @@ const Contact = () => {
     {
       name: "Kaggle",
       icon: FaKaggle,
-      url: "https://kaggle.com/yourusername",
+      url: "https://kaggle.com/shanilpraveen",
       color: "bg-cyan-500 hover:bg-cyan-600",
     },
     {

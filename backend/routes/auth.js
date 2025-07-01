@@ -5,16 +5,16 @@ const Admin = require('../models/Admin');
 const router = express.Router();
 
 
-router.post('/register',async (req,res)=>{
-    const {username,password} = req.body;
-    const hashed = await bcrypt.hash(password,10);
-    const newAdmin = new Admin({
-        username,
-        password : hashed
-    });
-    await newAdmin.save();
-    res.json({message : 'Admin registered successfully'});
-});
+// router.post('/register',async (req,res)=>{
+//     const {username,password} = req.body;
+//     const hashed = await bcrypt.hash(password,10);
+//     const newAdmin = new Admin({
+//         username,
+//         password : hashed
+//     });
+//     await newAdmin.save();
+//     res.json({message : 'Admin registered successfully'});
+// });
 
 router.post('/login',async (req,res)=>{
     const {username,password} = req.body;
