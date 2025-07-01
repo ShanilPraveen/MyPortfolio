@@ -3,7 +3,7 @@ import React from 'react';
 import { IoIosMail } from "react-icons/io";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGithub } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
+import { FaFacebook } from "react-icons/fa";
 
 
 const Footer = () => {
@@ -68,13 +68,13 @@ const Footer = () => {
                 <IoLogoLinkedin size={20} />
               </a>
               <a 
-                href="https://instagram.com/yourusername" 
+                href="https://www.facebook.com/profile.php?id=61552762254541&mibextid=ZbWKwL" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 transition-colors"
-                aria-label="Instagram"
+                aria-label="Facebook"
               >
-                <FaInstagram size={20} />
+                <FaFacebook size={20} />
               </a>
             </div>
           </div>

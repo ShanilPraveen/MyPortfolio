@@ -1,6 +1,6 @@
 import { IoIosMail } from "react-icons/io";
 import { IoLogoLinkedin } from "react-icons/io5";
-import { FaGithub, FaInstagram } from "react-icons/fa";
+import { FaGithub, FaFacebook } from "react-icons/fa";
 import { GrContact } from "react-icons/gr";
 import Image from "next/image";
 import handshake from "../images/contact.jpg";
@@ -127,19 +127,17 @@ const Contact = () => {
             <div className="bg-white border-2 rounded-xl shadow-lg p-6 transition-all duration-300 hover:shadow-xl hover:scale-[1.01]">
               <div className="flex items-center">
                 <div className="mr-6">
-                  <div className="bg-gradient-to-tr from-purple-600 via-pink-500 to-orange-400 p-4 rounded-lg">
-                    <FaInstagram className="text-white text-2xl" />
+                  <div className="bg-[#1877F2] p-4 rounded-lg">
+                    <FaFacebook className="text-white text-2xl" />
                   </div>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-semibold text-blue-800 mb-1">
-                    Instagram
+                    Facebook
                   </h3>
-                  <p className="text-blue-700 text-sm mb-3">
-                    Follow my creative journey
-                  </p>
+                  <p className="text-blue-700 text-sm mb-3">Follow me</p>
                   <a
-                    href="https://instagram.com/yourusername"
+                    href="https://www.facebook.com/profile.php?id=61552762254541&mibextid=ZbWKwL"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="inline-flex items-center text-black hover:underline"
