@@ -1,4 +1,4 @@
 declare module 'vanta/dist/vanta.net.min' {
-  const effect: any;
+  const effect: unknown;
   export default effect;
 }

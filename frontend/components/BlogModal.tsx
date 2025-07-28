@@ -31,8 +31,12 @@ const BlogModal: React.FC<BlogModalProps> = ({ onClose, onBlogAdded }) => {
             });
             onBlogAdded(); 
             onClose(); 
-        } catch (err: any) {
-            setError(err.message || 'Failed to add blog');
+        } catch (err: unknown) {
+            if (err instanceof Error) {
+                setError(err.message);
+            } else {
+                setError('Failed to add blog');
+            }
         }
     };
     

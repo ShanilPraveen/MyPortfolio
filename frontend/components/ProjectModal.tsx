@@ -36,8 +36,12 @@ const ProjectModal: React.FC<ProjectModalProps> = ({ onClose, onProjectAdded }) 
             });
             onProjectAdded(); // refresh parent list
             onClose(); // close modal
-        } catch (err: any) {
-            setError(err.message || 'Failed to add project');
+        } catch (err: unknown) {
+            if (err instanceof Error) {
+                setError(err.message);
+            } else {
+                setError('Failed to add project');
+            }
         }
     };
 
