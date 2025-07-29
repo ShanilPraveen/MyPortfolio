@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import me from "../images/me.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const sentence = "I'm a Computer Science & Engineering undergraduate dedicated to creating innovative solutions through technology. Join me in my journey as I explore the intersection of code and creativity.";
 const words = sentence.split(" ");
@@ -60,15 +61,15 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.8 }}
         >
-          <a
+          <Link
             href="/projects"
             className="bg-gradient-to-r from-blue-700 to-blue-500 text-white font-semibold py-3 px-6 rounded-full hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 inline-block text-center"
           >
             My Work
-          </a>
-          <a href='/about' className="border-2 border-blue-600 text-blue-700 font-semibold py-3 px-6 rounded-full hover:bg-blue-50 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 ml-5">
+          </Link>
+          <Link href='/about' className="border-2 border-blue-600 text-blue-700 font-semibold py-3 px-6 rounded-full hover:bg-blue-50 hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 ml-5">
             About Me
-          </a>
+          </Link>
         </motion.div>
         
       </div>

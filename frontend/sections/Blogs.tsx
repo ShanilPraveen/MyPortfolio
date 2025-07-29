@@ -7,6 +7,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { IoNewspaperSharp } from "react-icons/io5";
 import { Blog } from "@/types";
+import Link from "next/link";
 
 function BlogsSection() {
   const [blogs, setBlogs] = useState<Blog[]>([]);
@@ -126,12 +127,12 @@ function BlogsSection() {
         </div>
       </div>
 
-      <a
+      <Link
         className="bg-blue-600 hover:bg-blue-700 hover:scale-110 text-white px-6 py-2 rounded-md inline-block font-medium transition-colors"
         href="/blogs"
       >
         View All Blogs
-      </a>
+      </Link>
     </section>
   );
 }

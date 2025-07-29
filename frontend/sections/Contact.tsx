@@ -4,6 +4,7 @@ import { FaGithub, FaFacebook } from "react-icons/fa";
 import { GrContact } from "react-icons/gr";
 import Image from "next/image";
 import handshake from "../images/contact.jpg";
+import Link from 'next/link';
 
 const Contact = () => {
   return (
@@ -41,9 +42,9 @@ const Contact = () => {
                   <h3 className="text-xl font-semibold text-blue-700 ">
                     Email
                   </h3>
-                  <a href="/contact" className="text-black hover:underline">
+                  <Link href="/contact" className="text-black hover:underline">
                     Send Me an Email
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -64,7 +65,7 @@ const Contact = () => {
                   <p className="text-blue-700 text-sm mb-3">
                     Check out my code repositories
                   </p>
-                  <a
+                  <Link
                     href="https://github.com/ShanilPraveen"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -83,7 +84,7 @@ const Contact = () => {
                       <line x1="5" y1="12" x2="19" y2="12"></line>
                       <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -100,7 +101,7 @@ const Contact = () => {
                     LinkedIn
                   </h3>
                   <p className="text-blue-700 text-sm mb-3">Connect with me</p>
-                  <a
+                  <Link
                     href="https://www.linkedin.com/in/shanil-praveen"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -119,7 +120,7 @@ const Contact = () => {
                       <line x1="5" y1="12" x2="19" y2="12"></line>
                       <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -136,7 +137,7 @@ const Contact = () => {
                     Facebook
                   </h3>
                   <p className="text-blue-700 text-sm mb-3">Follow me</p>
-                  <a
+                  <Link
                     href="https://www.facebook.com/profile.php?id=61552762254541&mibextid=ZbWKwL"
                     target="_blank"
                     rel="noopener noreferrer"
@@ -155,7 +156,7 @@ const Contact = () => {
                       <line x1="5" y1="12" x2="19" y2="12"></line>
                       <polyline points="12 5 19 12 12 19"></polyline>
                     </svg>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

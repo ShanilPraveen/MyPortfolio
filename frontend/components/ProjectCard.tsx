@@ -1,14 +1,18 @@
 import React from "react";
 import { Project } from "@/types";
+import Image from "next/image";
+import Link from "next/link";
 
 const ProjectCard = ({ project }: { project: Project }) => {
   return (
     <div className="flex flex-col space-y-3 border border-gray-200 rounded-lg shadow-md p-5 w-full h-full overflow-hidden bg-white hover:shadow-lg transition-all duration-300">
       <div className="w-full h-48 bg-gray-100 flex items-center justify-center overflow-hidden rounded">
-        <img
+        <Image
           src={project.imageUrl}
           alt={project.title}
           className="object-cover w-full h-full"
+          layout="fill"
+          objectFit="cover"
         />
       </div>
 
@@ -31,15 +35,15 @@ const ProjectCard = ({ project }: { project: Project }) => {
           </span>
         ))}
       </div>
-      
-      <a
+
+      <Link
         href={project.githubUrl}
         className="text-blue-600 hover:text-blue-800 mt-auto text-sm font-medium"
         target="_blank"
         rel="noopener noreferrer"
       >
         View project →
-      </a>
+      </Link>
     </div>
   );
 };

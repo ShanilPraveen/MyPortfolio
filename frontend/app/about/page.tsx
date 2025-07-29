@@ -193,15 +193,12 @@ const About = () => {
                   </div>
                 </div>
                 <p className="text-blue-800">
-                  Currently pursuing a Bachelor's degree in Computer Science, I
+                  Currently pursuing a Bachelor&apos;s degree in Computer Science, I
                   am gaining a strong foundation in data science, advanced
                   algorithms, artificial intelligence, and software engineering
                   principles. My university has been instrumental in deepening
                   my technical skills and broadening my perspective on
-                  real-world problem solving. The intellectually stimulating
-                  environment, combined with opportunities for research, coding
-                  competitions, and collaborative projects, continues to
-                  challenge and inspire me.
+                  real-world problem solving.
                 </p>
               </div>
             </motion.div>
@@ -380,7 +377,7 @@ const About = () => {
                   </div>
                   <p className="text-blue-800">
                     Exploring nature and challenging myself on various trails.
-                    There's something profoundly rewarding about reaching a
+                    There&apos;s something profoundly rewarding about reaching a
                     summit and taking in the panoramic views after a challenging
                     hike.
                   </p>
@@ -431,7 +428,7 @@ const About = () => {
 
           <div className="rounded-lg shadow-lg bg-white p-6 mb-8 border border-blue-100">
             <p className="text-blue-800 mb-6">
-              Throughout my journey, I've participated in various programs,
+              Throughout my journey, I&apos;ve participated in various programs,
               projects, and memorable experiences that have shaped my skills and
               perspective. Each opportunity and cherished memory has contributed
               to my growth as a developer, problem solver, and individual,
@@ -467,7 +464,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto mb-12 h-px bg-blue-200"></div>
 
           <h3 className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-blue-900 mb-6">
-            "Stay curious. Keep building. Explore beyond the screen."
+            &quot;Stay curious. Keep building. Explore beyond the screen.&quot;
           </h3>
 
           <p className="text-lg text-blue-800 max-w-3xl mx-auto">

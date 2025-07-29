@@ -3,7 +3,6 @@ import Tech from "../sections/Tech";
 import Projects from "../sections/Projects";
 import Blogs from "../sections/Blogs";
 import Contact from "../sections/Contact";
-import Particles from "../components/Particles";
 
 const HomePage = () => {
   return (

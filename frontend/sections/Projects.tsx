@@ -6,6 +6,7 @@ import ProjectCard from "@/components/ProjectCard";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaArrowLeft, FaArrowRight, FaLaptopCode } from "react-icons/fa";
 import { Project } from "@/types";
+import Link from "next/link";
 
 function ProjectsSection() {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -126,12 +127,12 @@ function ProjectsSection() {
         </div>
       </div>
 
-      <a
+      <Link
         className="bg-blue-600 hover:bg-blue-700 hover:scale-110 text-white px-6 py-2 rounded-md inline-block font-medium transition-colors"
         href="/projects"
       >
         View All Projects
-      </a>
+      </Link>
     </section>
   );
 }

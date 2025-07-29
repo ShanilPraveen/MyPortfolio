@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { Blog } from "@/types";
 import { IoNewspaperSharp } from "react-icons/io5";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const BlogsPage = () => {
   const [blogs, setBlogs] = useState<Blog[]>([]);
@@ -91,10 +92,12 @@ const BlogsPage = () => {
               className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
             >
               <div className="relative w-full h-56 bg-gradient-to-br from-blue-50 to-gray-100 overflow-hidden">
-                <img
+                <Image
                   src={blog.imageUrl}
                   alt={blog.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  layout="fill"
+                  objectFit="cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>

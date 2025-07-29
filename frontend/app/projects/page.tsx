@@ -5,6 +5,8 @@ import { useEffect, useState } from "react";
 import { Project } from "@/types";
 import { FaLaptopCode } from "react-icons/fa";
 import { motion } from "framer-motion";
+import Image from "next/image";
+import Link from "next/link";
 
 const ProjectsPage = () => {
   const [projects, setProjects] = useState<Project[]>([]);
@@ -74,7 +76,7 @@ const ProjectsPage = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            Discover the projects I've built with passion and dedication. Each one represents a unique challenge and learning experience.
+            Discover the projects I&apos;ve built with passion and dedication. Each one represents a unique challenge and learning experience.
           </motion.p>
         </div>
 
@@ -91,10 +93,12 @@ const ProjectsPage = () => {
               className="group bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden border border-gray-100"
             >
               <div className="relative w-full h-56 bg-gradient-to-br from-blue-50 to-gray-100 overflow-hidden">
-                <img
+                <Image
                   src={project.imageUrl}
                   alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  layout="fill"
+                  objectFit="cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               </div>
@@ -123,14 +127,14 @@ const ProjectsPage = () => {
                 </div>
 
                 <div className="pt-2">
-                  <a
+                  <Link
                     href={project.githubUrl}
                     className="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium text-sm group-hover:underline transition-all duration-200"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     View Project →
-                  </a>
+                  </Link>
                 </div>
               </div>
             </motion.div>

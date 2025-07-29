@@ -14,6 +14,7 @@ import {
   FaPaperPlane,
 } from "react-icons/fa";
 import {sendEmail} from "../../lib/api"; 
+import Link from "next/link";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -254,7 +255,7 @@ const Contact = () => {
                   animate={{ opacity: 1, y: 0 }}
                   className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg"
                 >
-                  Message sent successfully! I'll get back to you soon.
+                  Message sent successfully! I&apos;ll get back to you soon.
                 </motion.div>
               )}
 
@@ -312,13 +313,13 @@ const Contact = () => {
                 technical skills, feel free to download my resume.
               </p>
 
-              <a
+              <Link
                 href="/resume.pdf"
                 download
                 className="inline-block bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
               >
                 Download Resume
-              </a>
+              </Link>
             </div>
           </motion.div>
         </div>

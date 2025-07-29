@@ -16,6 +16,16 @@ import {
 
 const AdminPage = () => {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
+   const [projects, setProjects] = useState<
+    { _id: string; title: string; description: string }[]
+  >([]);
+  const [blogs, setBlogs] = useState<
+    { _id: string; title: string; description: string }[]
+  >([]);
+  const [showProjectModal, setShowProjectModal] = useState(false);
+  const [showBlogModal, setShowBlogModal] = useState(false);
+  const [activeTab, setActiveTab] = useState("projects");
+
   const router = useRouter();
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -27,6 +37,12 @@ const AdminPage = () => {
     }
   }, [router]);
 
+  
+  useEffect(() => {
+    fetchAndSetProjects();
+    fetchAndSetBlogs();
+  }, []);
+
   if (isAuthenticated === null) {
     return (
       <div className="flex items-center justify-center h-screen">
@@ -35,15 +51,7 @@ const AdminPage = () => {
     );
   }
 
-  const [projects, setProjects] = useState<
-    { _id: string; title: string; description: string }[]
-  >([]);
-  const [blogs, setBlogs] = useState<
-    { _id: string; title: string; description: string }[]
-  >([]);
-  const [showProjectModal, setShowProjectModal] = useState(false);
-  const [showBlogModal, setShowBlogModal] = useState(false);
-  const [activeTab, setActiveTab] = useState("projects");
+ 
 
   const fetchAndSetProjects = async () => {
     const projectsData = await fetchProjects();
@@ -55,10 +63,10 @@ const AdminPage = () => {
     setBlogs(blogsData);
   };
 
-  useEffect(() => {
-    fetchAndSetProjects();
-    fetchAndSetBlogs();
-  }, []);
+  // useEffect(() => {
+  //   fetchAndSetProjects();
+  //   fetchAndSetBlogs();
+  // }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
