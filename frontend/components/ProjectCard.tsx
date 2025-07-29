@@ -11,8 +11,8 @@ const ProjectCard = ({ project }: { project: Project }) => {
           src={project.imageUrl}
           alt={project.title}
           className="object-cover w-full h-full"
-          layout="fill"
-          objectFit="cover"
+          width={500}
+          height={300}
         />
       </div>
 
