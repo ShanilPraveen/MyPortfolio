@@ -85,9 +85,6 @@ const Footer = () => {
           <p className="text-gray-400 text-sm">
             © {currentYear} Shanil Praveen. All rights reserved.
           </p>
-          <p className="text-gray-400 text-sm mt-2 md:mt-0">
-            Designed & Built with ❤️
-          </p>
         </div>
       </div>
     </footer>

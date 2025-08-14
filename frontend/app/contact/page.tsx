@@ -82,7 +82,7 @@ const Contact = () => {
     {
       name: "Medium",
       icon: FaMedium,
-      url: "https://medium.com/@yourusername",
+      url: "https://medium.com/@jspraveen2002",
       color: "bg-green-600 hover:bg-green-700",
     },
   ];
@@ -305,20 +305,20 @@ const Contact = () => {
 
             <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-100">
               <h3 className="text-gray-800 font-bold text-xl mb-4">
-                Download My Resume
+                Download My CV
               </h3>
 
               <p className="text-gray-600 mb-4 text-sm">
                 For a detailed overview of my experience, education, and
-                technical skills, feel free to download my resume.
+                technical skills, feel free to download my CV.
               </p>
 
               <Link
-                href="/resume.pdf"
+                href="/cv.pdf"
                 download
                 className="inline-block bg-blue-600 text-white font-semibold px-6 py-2 rounded-lg hover:bg-blue-700 transition duration-300"
               >
-                Download Resume
+                Download CV
               </Link>
             </div>
           </motion.div>

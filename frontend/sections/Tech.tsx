@@ -66,6 +66,7 @@ const Tech = () => {
             <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">JavaScript</span>
             <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">Python</span>
             <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">Java</span>
+            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">C++</span>
           </div>
         </motion.div>
         
@@ -85,12 +86,14 @@ const Tech = () => {
             Frameworks & Libraries
           </h2>
           <p className="text-gray-700 font-medium">
-            I utilize React, Next.js, TailwindCSS, Node.js, FastAPI, MongoDB and SQL for my projects.
+            I utilize React, Next.js, TailwindCSS, Node.js, Express.js and FastAPI for my projects.
           </p>
           <div className="pt-2 flex space-x-2">
             <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">React</span>
             <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">Node.js</span>
             <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">MongoDB</span>
+            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">FastAPI</span>
+
           </div>
         </motion.div>
         
@@ -110,12 +113,12 @@ const Tech = () => {
             Tools & Technologies
           </h2>
           <p className="text-gray-700 font-medium">
-            Git, Docker and GCP are integral to my workflow.
+            Git,Github, Docker and Figma are integral to my workflow.
           </p>
           <div className="pt-2 flex space-x-2">
             <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">Git</span>
-            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">Docker</span>
-            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">GCP</span>
+            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">Github</span>
+            <span className="px-3 py-1 bg-blue-50 text-blue-700 text-xs font-medium rounded-full">Figma</span>
           </div>
         </motion.div>
       </div>

@@ -14,7 +14,7 @@ const Navbar: React.FC = () => {
     <nav className="bg-white shadow-sm sticky w-full top-0 sm:py-5 py-3 flex sm:justify-center justify-end z-50">
       <div className="hidden sm:flex w-4/5 justify-between items-center">
         <DecryptedText
-          text="Welcome To My Portfolio"
+          text="My Portfolio"
           animateOn="view"
           sequential
           speed={100}

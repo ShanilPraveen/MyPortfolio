@@ -108,7 +108,7 @@ const ProjectsPage = () => {
                   {project.title}
                 </h2>
 
-                <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                <p className="text-gray-600 text-sm leading-relaxed line-clamp-*">
                   {project.description}
                 </p>
 
